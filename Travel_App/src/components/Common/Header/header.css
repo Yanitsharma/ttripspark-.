@@ -104,8 +104,10 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
     padding: 12px 10px;
     color:var(--black);
   }
-
-
-
-
+}
+.gallery-link {
+  color: rgb(244, 243, 243) !important;
+}
+.is-sticky .gallery-link {
+  color: var(--black) !important;
 }
