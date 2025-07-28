@@ -109,3 +109,26 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
 
 
 }
+
+.logo-container {
+  background-color: #f0f0f0; /* ✅ Change this to any color */
+  padding: 5px;
+  border-radius: 5px; /* Optional rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background: #000000;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fffcfc;
+  margin-left: 8px;
+}
