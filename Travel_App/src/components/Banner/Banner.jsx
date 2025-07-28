@@ -17,9 +17,10 @@ const Banner = () => {
                   JOURNEY TO <span>EXPLORE WORLD</span>
                 </h5>
                 <p className="sub_text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,
+                 🌍 Welcome to TripSpark
+The ultimate app for hidden gems, must-visit spots, and unforgettable experiences — handpicked for curious explorers like you.
+
+
                 </p>
               </div>
             </Carousel.Caption>
@@ -33,9 +34,8 @@ const Banner = () => {
                   BEAUTIFUL PLACE <span>TO VISIT</span>
                 </h5>
                 <p className="sub_text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,
+                  🌍 Discover the World at Your Fingertips
+Tired of complicated travel planning? Let us make your next trip unforgettable.
                 </p>
               </div>
             </Carousel.Caption>

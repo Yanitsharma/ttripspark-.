@@ -52,7 +52,7 @@ const Footer = () => {
               </ListGroup>
             </Col>
             <Col md="3" sm="12" className="quick_link mt-3 mt-md-0">
-              <h4 className="mt-lg-0 mt-sm-3" className={"co"}>
+              <h4 className="mt-lg-0 mt-sm-3"  ClassName={"co"}>
                 Explore{" "}
               </h4>
               <ListGroup variant="flush">
@@ -76,7 +76,7 @@ const Footer = () => {
               </ListGroup>
             </Col>
             <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3" className={"co"}>
+              <h4 className="mt-lg-0 mt-sm-3"   ClassName={"co"}>
                 Quick Link{" "}
               </h4>
               <ListGroup variant="flush">
@@ -100,14 +100,14 @@ const Footer = () => {
               </ListGroup>
             </Col>
             <Col md="3" sm="12" className="location mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3" className={"mail"}>
+              <h4 className="mt-lg-0 mt-sm-3" ClassName={"mail"}>
                 Contact Info{" "}
               </h4>
 
               <div className="d-flex align-items-center">
-                <p className="pb-2" className={"mail"}>
+                <p className="pb-2" ClassName={"mail"}>
                   {" "}
-                  Dehradun, Uttarakhand, India
+                   UttarPradesh,India
                 </p>
               </div>
 
@@ -118,7 +118,7 @@ const Footer = () => {
                   href="mailto:rawatcoder@gmail.com"
                   className="d-block mail"
                 >
-                  rawatcoder@gmail.com
+                 connect@afame.in
                 </a>
               </div>
               <div className="d-flex align-items-top ">
@@ -128,7 +128,7 @@ const Footer = () => {
                   href="tel:9876543210"
                   className="d-block mail"
                 >
-                  9876543210
+                 9450433876
                 </a>
               </div>
             </Col>
@@ -137,7 +137,7 @@ const Footer = () => {
             <Col className="col copyright">
               <p className="text-light">
                 {" "}
-                @ 2024. rawatcoder All rights reserved{" "}
+                @ 2025.Afame Technologies All rights reserved{" "}
               </p>
             </Col>
           </Row>

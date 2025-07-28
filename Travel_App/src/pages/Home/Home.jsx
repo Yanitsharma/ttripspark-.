@@ -123,9 +123,10 @@ const Home = () => {
                 READY FOR UNFORGETTABLE TRAVEL. REMEMBER US!
               </h2>
               <p className="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
+              🌍 Travel Isn’t a Destination. It’s a Feeling.
+And your next “wow” moment?
+It’s somewhere no one’s been yet.
+We’ll help you find it.
               </p>
             </Col>
             <Col md="4" className="text-center mt-3 mt-md-0">
