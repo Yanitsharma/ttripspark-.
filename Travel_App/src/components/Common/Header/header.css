@@ -105,9 +105,35 @@ header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
     color:var(--black);
   }
 }
+<<<<<<< HEAD
 .gallery-link {
   color: rgb(244, 243, 243) !important;
 }
 .is-sticky .gallery-link {
   color: var(--black) !important;
 }
+=======
+
+.logo-container {
+  background-color: #f0f0f0; /* ✅ Change this to any color */
+  padding: 5px;
+  border-radius: 5px; /* Optional rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background: #000000;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fffcfc;
+  margin-left: 8px;
+}
+>>>>>>> 45be9bf301e1974f8b33b0891c3b1980ff15a1e9

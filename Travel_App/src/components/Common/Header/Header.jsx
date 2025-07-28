@@ -6,10 +6,21 @@ import {
   Nav,
   NavDropdown,
 } from "react-bootstrap";
+<<<<<<< HEAD
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+=======
+import { NavLink } from "react-router-dom";
+import BookingForm from "../../AdvanceSearch/BookTrip/BookingForm";
+>>>>>>> 45be9bf301e1974f8b33b0891c3b1980ff15a1e9
 import "../Header/header.css";
 
 const Header = () => {
+
+const [showForm, setShowForm] = useState(false);
+
+const handleOpenForm = () => setShowForm(true);
+const handleCloseForm = () => setShowForm(false);
+
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -56,11 +67,31 @@ const Header = () => {
   return (
     <header className="header-section">
       <Container>
+<<<<<<< HEAD
         <Navbar expand="lg" className="p-0">
           {/* Logo */}
           <Navbar.Brand>
             <NavLink to="/">TripSpark</NavLink>
           </Navbar.Brand>
+=======
+       
+          <Navbar expand="lg" className="p-0">
+            {/* Logo Section  */}
+           <Navbar.Brand>
+  <NavLink to="/" className="d-flex align-items-center text-decoration-none">
+    <div className="logo-container">
+      <img
+        src="/logo.png"
+        alt="TripSpark Logo"
+        className="logo-img"
+      />
+    </div>
+    <span className="brand-name">TripSpark</span>
+  </NavLink>
+</Navbar.Brand>
+
+            {/* End Logo Section  */}
+>>>>>>> 45be9bf301e1974f8b33b0891c3b1980ff15a1e9
 
           {/* Offcanvas for Mobile */}
           <Navbar.Offcanvas
@@ -98,6 +129,7 @@ const Header = () => {
                   >
                     SPAIN TOURS
                   </NavLink>
+<<<<<<< HEAD
                 </NavDropdown>
 
                 <span
@@ -127,6 +159,31 @@ const Header = () => {
             </li>
           </div>
         </Navbar>
+=======
+                  
+                   
+                  </NavDropdown>
+                  <NavLink className="nav-link" to="/" >
+                    GALLERY
+                  </NavLink>
+                  <NavLink className="nav-link" to="/" >
+                    CONTACT
+                  </NavLink>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+            <div className="ms-md-4 ms-2">
+             <button className="primaryBtn d-none d-sm-inline-block" onClick={handleOpenForm}>
+  Book Now
+</button>
+{showForm && <BookingForm onClose={handleCloseForm} />}
+              <li className="d-inline-block d-lg-none ms-3 toggle_btn">
+                <i className={open ? "bi bi-x-lg" : "bi bi-list"}  onClick={toggleMenu}></i>
+              </li>
+            </div>
+          </Navbar>
+    
+>>>>>>> 45be9bf301e1974f8b33b0891c3b1980ff15a1e9
       </Container>
     </header>
   );

@@ -1,6 +1,5 @@
 footer {
   background: black;
-
 }
 
 footer h4 {
@@ -16,7 +15,7 @@ footer p,
 footer a,
 footer i,
 footer span,
-footer .copyright  {
+footer .copyright {
   margin: 0;
   font-size: var(--bodyText);
   color: whitesmoke;
@@ -49,33 +48,37 @@ footer .location .d-flex {
 }
 
 footer .bdr {
-    border-top: 1px solid #f5f5f578;
+  border-top: 1px solid #f5f5f578;
 }
 
-
-#back-top{
-    opacity: 0;
-    z-index: 99999;
-    font-size: 26px;
-    color:white;
-    line-height: 47px;
-    text-align: center;
-    position: fixed;
-    right: 20px;
-    bottom: 50px;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.6s ease;
-    transform: translateY(40px);
-    background: var(--primaryClr);
-
-
+#back-top {
+  opacity: 0;
+  z-index: 99999;
+  font-size: 26px;
+  color: white;
+  line-height: 47px;
+  text-align: center;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  transform: translateY(40px);
+  background: var(--primaryClr);
 }
 
-#back-top.active{
-    opacity: 1;
-    transition: all 0.6s ease;
-    transform: translateY(-20px);
+#back-top.active {
+  opacity: 1;
+  transition: all 0.6s ease;
+  transform: translateY(-20px);
+}
+
+.co:hover {
+  color: var(--primaryClr) !important;
+}
+.mail:hover {
+  color: rgb(31, 177, 235);
 }
