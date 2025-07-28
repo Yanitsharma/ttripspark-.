@@ -8,9 +8,16 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import BookingForm from "../../AdvanceSearch/BookTrip/BookingForm";
 import "../Header/header.css";
 
 const Header = () => {
+
+const [showForm, setShowForm] = useState(false);
+
+const handleOpenForm = () => setShowForm(true);
+const handleCloseForm = () => setShowForm(false);
+
   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -42,9 +49,19 @@ const Header = () => {
        
           <Navbar expand="lg" className="p-0">
             {/* Logo Section  */}
-            <Navbar.Brand>
-              <NavLink to="/">TripSpark</NavLink>
-            </Navbar.Brand>
+           <Navbar.Brand>
+  <NavLink to="/" className="d-flex align-items-center text-decoration-none">
+    <div className="logo-container">
+      <img
+        src="/logo.png"
+        alt="TripSpark Logo"
+        className="logo-img"
+      />
+    </div>
+    <span className="brand-name">TripSpark</span>
+  </NavLink>
+</Navbar.Brand>
+
             {/* End Logo Section  */}
 
             <Navbar.Offcanvas
@@ -96,9 +113,10 @@ const Header = () => {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
             <div className="ms-md-4 ms-2">
-              <NavLink className="primaryBtn d-none d-sm-inline-block">
-                Book Now
-              </NavLink>
+             <button className="primaryBtn d-none d-sm-inline-block" onClick={handleOpenForm}>
+  Book Now
+</button>
+{showForm && <BookingForm onClose={handleCloseForm} />}
               <li className="d-inline-block d-lg-none ms-3 toggle_btn">
                 <i className={open ? "bi bi-x-lg" : "bi bi-list"}  onClick={toggleMenu}></i>
               </li>
