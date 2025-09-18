@@ -1,11 +1,11 @@
 import React from 'react'
-import Lightroom from 'react-lightbox-gallery'
+import Lightbox from "yet-another-react-lightbox";
 import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
 import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
 import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
 import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
 import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
-
+import "yet-another-react-lightbox/styles.css";
 
 const Gallery = () => {
 
@@ -50,7 +50,7 @@ const Gallery = () => {
         enableZoom:false,
     };
     return (
-        <Lightroom images={images} settings={settings} />
+        <Lightbox images={images} settings={settings} />
    );
 }
 

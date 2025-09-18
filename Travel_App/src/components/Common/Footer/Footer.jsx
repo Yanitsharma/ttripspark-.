@@ -115,10 +115,10 @@ const Footer = () => {
                 <i className="bi bi-geo-alt me-3"></i>
                 <a
                   target="_blank"
-                  href="mailto:rawatcoder@gmail.com"
+                  href="sharmayanit@gmail.com"
                   className="d-block mail"
                 >
-                 connect@afame.in
+                 sharmayanit@gmail.com
                 </a>
               </div>
               <div className="d-flex align-items-top ">
@@ -128,7 +128,7 @@ const Footer = () => {
                   href="tel:9876543210"
                   className="d-block mail"
                 >
-                 9450433876
+                9352084018
                 </a>
               </div>
             </Col>
@@ -137,7 +137,7 @@ const Footer = () => {
             <Col className="col copyright">
               <p className="text-light">
                 {" "}
-                @ 2025.Afame Technologies All rights reserved{" "}
+                @2025.Yanit Sharma All rights reserved{" "}
               </p>
             </Col>
           </Row>
