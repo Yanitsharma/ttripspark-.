@@ -30,7 +30,7 @@ const handleCloseForm = () => setShowForm(false);
     };
   }, []);
 
-  // Sticky Header
+  
   const isSticky = () => {
     const header = document.querySelector(".header-section");
     const scrollTop = window.scrollY;
@@ -39,9 +39,7 @@ const handleCloseForm = () => setShowForm(false);
       : header.classList.remove("is-sticky");
   };
 
-  // Scroll to gallery
   const handleGalleryClick = () => {
-    setOpen(false); // close offcanvas if open
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -49,7 +47,7 @@ const handleCloseForm = () => setShowForm(false);
         if (galleryEl) {
           galleryEl.scrollIntoView({ behavior: "smooth" });
         }
-      }, 300); // wait for navigation and Home component to render
+      }, 300); 
     } else {
       const galleryEl = document.getElementById("gallery");
       if (galleryEl) {
@@ -57,6 +55,7 @@ const handleCloseForm = () => setShowForm(false);
       }
     }
   };
+
 
   return (
     <header className="header-section">
@@ -91,13 +90,13 @@ const handleCloseForm = () => setShowForm(false);
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
+                <NavLink className="nav-link" to="/" >
                   Home
                 </NavLink>
-                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
+                <NavLink className="nav-link" to="/" >
                   ABOUT US
                 </NavLink>
-                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
+                <NavLink className="nav-link" to="/" >
                   TOURS
                 </NavLink>
                 <NavDropdown
@@ -107,7 +106,7 @@ const handleCloseForm = () => setShowForm(false);
                   <NavLink
                     className="nav-link text-dark"
                     to="/"
-                    onClick={toggleMenu}
+      
                   >
                     SPAIN TOURS
                   </NavLink>
@@ -121,13 +120,13 @@ const handleCloseForm = () => setShowForm(false);
                   GALLERY
                 </span>
 
-                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
+                <NavLink className="nav-link" to="/" >
                   CONTACT
                 </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-
+          
          <div className="ms-md-4 ms-2">
              <button className="primaryBtn d-none d-sm-inline-block" onClick={handleOpenForm}>
   Book Now

@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import "../Cards/card.css";
 import { NavLink } from "react-router-dom";
 
-const Cards = ({destination}) => {
+const Cards = ({destination,key}) => {
   return (
     <>
       <div className="img-box">
@@ -11,6 +11,7 @@ const Cards = ({destination}) => {
         <Card>
           <Card.Img
             variant="top"
+            id={key}
             src={destination.image}
             className="img-fluid"
             alt={destination.name}

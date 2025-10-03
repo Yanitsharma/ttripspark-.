@@ -1,6 +1,5 @@
 import React from "react";
 import "../Features/features.css";
-
 import feature1 from "../../assets/images/feature/beach-umbrella.png";
 import feature2 from "../../assets/images/feature/deal.png";
 import feature3 from "../../assets/images/feature/location.png";
@@ -9,13 +8,11 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
 const Features = () => {
   var settings = {
     dots: false,
     infinite: true,
-    autoplay:false,
+    autoplay:true,
     autoplaySpeed:1500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -26,6 +23,7 @@ const Features = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
+          autoplay:true,
           infinite: false,
           dots: true,
         },

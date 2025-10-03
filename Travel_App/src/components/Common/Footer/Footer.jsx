@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "../Footer/footer.css";
 import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
+import { useEffect } from "react";
 const Footer = () => {
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
+   const scrolled = window.scrollY;
     if (scrolled > 300) {
       setVisible(true);
     } else if (scrolled <= 300) {
@@ -22,10 +22,12 @@ const Footer = () => {
     });
   };
 
-  if (typeof window !== "undefined") {
+   useEffect(() => {
     window.addEventListener("scroll", toggleVisible);
-  }
-
+    return () => {
+      window.removeEventListener("scroll", toggleVisible);
+    };
+  }, []); 
   return (
     <>
       <footer className="pt-5">
@@ -76,7 +78,7 @@ const Footer = () => {
               </ListGroup>
             </Col>
             <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3"   ClassName={"co"}>
+              <h4 className="mt-lg-0 mt-sm-3" ClassName={"co"}>
                 Quick Link{" "}
               </h4>
               <ListGroup variant="flush">

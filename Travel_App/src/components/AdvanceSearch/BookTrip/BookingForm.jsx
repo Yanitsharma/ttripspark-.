@@ -1,30 +1,4 @@
-// // components/AdvanceSearch/BookTrip/BookingForm.jsx
-// import React from 'react';
-// import styles from './BookingForm.module.css';
 
-// const BookingForm = ({ onClose }) => {
-//   return (
-//     <div className={styles.overlay}>
-//       <div className={styles.formContainer}>
-//         <h2>Book Your Trip</h2>
-//         <form>
-//           <input type="text" placeholder="Name" required />
-//           <input type="email" placeholder="Email" required />
-//           <input type="number" placeholder="Number of Guests" required />
-//           <input type="date" placeholder="Date" required />
-//           <button type="submit">Submit</button>
-//           <button type="button" onClick={onClose} className={styles.closeBtn}>
-//             Close
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BookingForm;
-
-// components/AdvanceSearch/BookTrip/BookingForm.jsx
 import React from "react";
 import styles from "./BookingForm.module.css";
 

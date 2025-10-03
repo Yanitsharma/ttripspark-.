@@ -1,7 +1,7 @@
 import React from 'react'
 import "../Cards/card.css";
 import { Card ,Stack} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PopularCard = ({val}) => {
   return (
@@ -14,13 +14,12 @@ const PopularCard = ({val}) => {
                 alt={"image"}
               />
               <Card.Body>
-              
                 <Card.Text>
                   <i className="bi bi-geo-alt"></i>
                   <span className="text">{val.location}</span>
                 </Card.Text>
 
-                <Card.Title><NavLink className="body-text text-dark text-decoration-none" to="/tour-details"> {val.title} </NavLink></Card.Title>
+                <Card.Title><Link className="body-text text-dark text-decoration-none" to={`/tour/${val.title.trim()}`}>{val.title} </Link></Card.Title>
                 <p className="reviwe">
                   <span>
                     <i className="bi bi-star-fill me-1"></i>

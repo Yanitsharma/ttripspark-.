@@ -1,10 +1,9 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
-import AdvanceSearch from "../../components/AdvanceSearch/AdvanceSearch";
 import Features from "../../components/Features/Features";
 import { Container, Row, Col } from "react-bootstrap";
 import Gallery from "../../components/Gallery/Gallery";
-
+import { useState,useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,9 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./home.css";
 
 import Cards from "../../components/Cards/Cards";
-import { destinationsData, popularsData } from "../../utils/data";
+import { getDestinationsData, getDestinationsData1 } from "../../utils/data";
 import PopularCard from "../../components/Cards/PopularCard";
-
 const Home = () => {
   const settings = {
     dots: false,
@@ -28,8 +26,8 @@ const Home = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
+          autoplay: true,
           infinite: false,
-          dots: true,
           autoplay: true,
         },
       },
@@ -38,8 +36,8 @@ const Home = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          autoplay: true,
           infinite: false,
-          dots: true,
         },
       },
       {
@@ -63,13 +61,30 @@ const Home = () => {
       },
     ],
   };
+ const [destinations, setDestinations] = useState([]);
+ const [destinations1, setDestinations1] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const loadData = async () => {
+      // 2. Call the exported function to get the data
+      const data = await getDestinationsData();
+      const data2 = await getDestinationsData1();
+      // 3. Set the data into your component's state
+      setDestinations(data);
+      setDestinations1(data2);
+      setLoading(false);
+    };
+
+    loadData();
+  }, []);
+if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <Banner />
-      <AdvanceSearch />
       <Features />
-
       {/* Tours Section */}
       <section className="tours_section slick_slider">
         <Container>
@@ -84,8 +99,8 @@ const Home = () => {
           <Row>
             <Col md="12">
               <Slider {...settings}>
-                {destinationsData.map((destination, index) => (
-                  <Cards destination={destination} key={index} />
+                {destinations.map((destination) => (
+                  <Cards key={destination._id} destination={destination}  />
                 ))}
               </Slider>
             </Col>
@@ -104,7 +119,7 @@ const Home = () => {
             </Col>
           </Row>
           <Row>
-            {popularsData.map((val, index) => (
+            {destinations1.map((val, index) => (
               <Col md={3} sm={6} xs={12} className="mb-5" key={index}>
                 <PopularCard val={val} />
               </Col>
@@ -130,7 +145,7 @@ We’ll help you find it.
               </p>
             </Col>
             <Col md="4" className="text-center mt-3 mt-md-0">
-              <a href="tel:6398312365" className="secondary_btn bounce">
+              <a href="/" className="secondary_btn bounce">
                 Contact Us!
               </a>
             </Col>
